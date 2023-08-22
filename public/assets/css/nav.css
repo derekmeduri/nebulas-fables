@@ -1,0 +1,144 @@
+/*
+Background image
+*/
+
+.background {
+  background-image: url(../images/NF.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  height: 150vh;
+  }
+
+  /* 
+Website Header
+*/
+
+.header {
+  margin-top: 40px;
+  padding-top: 20px;
+  margin-bottom: 35px;
+  font-size: 80px;
+  color: blueviolet;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  text-align: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+/*
+Nav Bar Container
+*/
+
+.NavContainer{
+  position: sticky;
+  top: 0;
+  background-color: rgba(8, 1, 1, 0.5);
+  padding-block: 10px;
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  z-index: 1;
+}
+
+/*
+search bar
+*/
+
+#user-search{
+  display: flex;
+  font-family: "Press Start 2P", sans-serif;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+#user-input{
+  overflow: hidden;
+  width: fit-content;
+  float: left;
+}
+
+#searchBtn{
+  font-size: 10px;
+  overflow: hidden;
+}
+
+/*
+Nav
+*/
+
+.nav{
+  overflow: hidden;
+  display: flex;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+/*
+Home button
+*/
+
+#Home {
+  margin: 5px;
+  background-color: rgba(175, 19, 236, 0.75);
+  box-shadow: 5px 5px rgba(105, 7, 135, 0.75);
+}
+
+/* 
+Directory Button
+*/
+
+#Directory {
+  margin: 5px;
+  background-color: rgba(203, 22, 13, 0.75);
+  box-shadow: 5px 5px rgba(150, 30, 3, 0.75);
+}
+ 
+  /*
+  Nasa Button
+  */
+
+#NASA {
+  margin: 5px;
+  background-color: rgba(30, 53, 225, 0.75);
+  box-shadow: 5px 5px rgba(173, 7, 7, 0.75);
+}
+
+/*
+Mythos Button
+*/
+
+#Mythos {
+  margin: 5px;
+  background-color: rgba(30, 225, 82, 0.75);
+  box-shadow: 5px 5px rgba(29, 157, 12, 0.75);
+}
+
+/* 
+About Button
+*/
+
+#About {
+  margin: 5px;
+  background-color: rgba(5, 82, 198, 0.75);
+  box-shadow: 5px 5px rgba(10, 3, 150, 0.75);
+}
+
+@media screen and (max-width: 100%) {
+  .NavContainer {
+    float: none;
+    display: flex;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}

@@ -1,0 +1,97 @@
+
+.main{
+   color: aqua;
+}
+
+.auth-links {
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: 10px;
+   padding-right: 20px;
+ }
+ 
+ .auth-link {
+   color: cyan;
+   text-decoration: none;
+   margin-left: 20px;
+ }
+ 
+ @media (min-width: 768px) {
+   .nav-buttons {
+     justify-content: space-between;
+   }
+ }
+
+.smile {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   border: none;
+   font-family: "Press Start 2P", sans-serif;
+   color: aqua;
+   width: fit-content;
+}
+
+ul#search-history {
+   display: flex;
+   list-style: none;
+}
+
+li{
+   list-style-type: none;
+}
+
+#Space {
+   display: flex;
+   background-color: rgba(49, 83, 218, 0.5);
+   box-shadow: 5px 5px 8px 8px rgba(1, 0, 0, 0.5);
+   border-radius: 10px;
+   transition: 0.3s;
+   padding: 50px;
+   margin: 20px;
+   font-size: 20px;
+   width: fit-content;
+}
+
+#search-history {
+   display: flex;
+   flex-direction: column;
+}
+
+#Myth {
+   display: block;
+   background-color: rgba(10, 4, 119, 0.5);
+   box-shadow: 5px 5px 8px 8px rgba(1, 0, 0, 0.5);
+   border-radius: 10px;
+   transition: 0.3s;
+   padding: 50px;
+   margin: 20px;
+   font-size: 20px;
+}
+
+#Direct {
+   display: block;
+   background-color: rgba(88, 4, 162, 0.5);
+   box-shadow: 5px 5px 8px 8px rgba(1, 0, 0, 0.5);
+   border-radius: 10px;
+   transition: 0.3s;
+   padding: 50px;
+   margin: 20px;
+   font-size: 20px;
+}
+
+#HI {
+   display: block;
+   background-color: rgba(65, 153, 248, 0.5);
+   box-shadow: 5px 5px 8px 8px rgba(1, 0, 0, 0.5);
+   border-radius: 10px;
+   transition: 0.3s;
+   padding: 50px;
+   margin: 20px;
+   font-size: 20px;
+}
+
+ .card:hover {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+ }

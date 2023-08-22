@@ -1,0 +1,24 @@
+.main{
+    color: aqua;
+ }
+ 
+ .NA-sa {
+    display: block;
+    background-color: rgba(231, 16, 16, 0.2);
+    box-shadow: 5px 5px 8px 8px rgba(9, 19, 222, 0.2);
+    font-family: "Press Start 2P", sans-serif;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 50px;
+    margin: 20px;
+    font-size: 20px;
+    align-items: center;
+ }
+
+ p {
+   display: block;
+   color: rgb(4, 59, 59);
+   font-family: "Press Start 2P", sans-serif;
+ }
+ 
+ .ar

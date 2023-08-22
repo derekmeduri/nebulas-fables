@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nebulas Fables</title>
+    <link rel="reset-stylesheet" href="./assets/css/reset.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./assets/css/nav.css"/>
+
+    <link rel="stylesheet" href="./assets/css/Mythos/mythos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P:regular"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"/>
+  </head>
+
+  <body class="background">
+    <header class="header">
+      <h1>Nebulas Fables</h1>
+    </header>
+
+    <section class="NavContainer">
+<!--  SEARCH BAR - DISABLED ON DIRECTORY page
+      <section id="user-search">
+        <input id="user-input" type="text" placeholder="Search the Galaxy" />
+        <button id="searchBtn">Search</button>
+      </section>
+      <div id="img-card"></div> -->
+
+      <nav class="nav">
+          <a href="/"><button type="button" class="main" id="Home">Home</button></a>
+          <a href="directory"><button type="button" id="Directory">Directory</button></a>
+          <a href="NASA"><button type="button" id="NASA">NASA</button></a>
+          <a href="mythos"><button type="button" id="Mythos">Mythos</button></a>
+          <a href="about"><button type="button" id="About">About</button></a>
+           <a href="login"><button type="button" id="login">Login</button></a>
+          <a href="signup"><button type="button" id="signup">Signup</button></a>
+          <a href="/logout"><button type="button" id="logout">Logout</button></a>
+      </nav>
+    </section>
+
+
+  <!-- constellation.handlebars placeholder-->
+
+<section class="container">
+  <!-- If the user is logged in, show dropdown menu and constellation details -->
+  {{#if loggedIn}}
+    <section>
+      <!-- Constellation dropdown -->
+        <div class="dropdown">
+     <h2> <label for="dropdown">Select a constellation:</label> </h2>
+          <select name="constellationOption" id="constellationOption"> 
+            {{!-- for each loop for all constellations --}}
+            {{!-- <option value="0">--</option>  --}}
+            <option value="" disabled selected>Select a constellation</option> <!-- Blank space option -->
+              <option value="1">Orion</option> 
+              <option value="2">Scorpio</option> 
+              </select>
+      </div>
+    
+    </section>
+    
+    <!-- Constellation details -->
+    <h3 class="constellation-name">{{selectedConstellation.name}}</h3>
+    <section class="flex-row justify-center">
+      <p><h3>Stars:</h3>
+        <ul class="stars-list">
+          {{#each selectedConstellation.starList}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </p>
+      <p><h3>Facts:</h3>
+        <ul class="facts-list">
+          {{#each selectedConstellation.factList}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </p>
+    </section>
+    
+  {{else}}
+    <!-- Provide a link to login if not logged in -->
+    <section class="smile">
+      <div id="HI">
+        <ul>
+          <h1>Members</h1>
+          <br />
+          <li>
+            You must <a href="/login">login</a> first to view this page...
+          </li>
+          <br />
+        </ul>
+      </div>
+    </section>
+  {{/if}}
+</section>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" 
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" 
+    crossorigin="anonymous"></script>
+   <script src="./assets/js/constellation.js"></script>
+
+
+  </body>
+</html>
